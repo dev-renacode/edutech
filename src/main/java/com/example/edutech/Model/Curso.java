@@ -14,5 +14,6 @@ public class Curso {
     private int fechaCreacion;
     private String docenteCurso;
     private String descripcion;
-    private int horasDuracion;    
+    private int horasDuracion;
+    private int precio;    
 }
