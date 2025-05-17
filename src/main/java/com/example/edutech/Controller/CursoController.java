@@ -18,7 +18,7 @@ import com.example.edutech.Service.CursoService;
 
 
 @RestController
-@RequestMapping("/api/v1/cursos")
+@RequestMapping("/api/v2/cursos")
 
 public class CursoController {
     @Autowired
