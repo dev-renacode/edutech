@@ -53,6 +53,4 @@ public class CursoController {
     public int totalCursosV2() {
         return cursoService.totalCursosV2();
     }
-
-
 }
