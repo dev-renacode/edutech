@@ -46,7 +46,7 @@ public class CursoRepository {
         return curso;
     }
     
-    public Curso actualiar(Curso cur){
+    public Curso actualizar(Curso cur){
         int id = 0;
         int idPosicion = 0;
 
