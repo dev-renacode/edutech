@@ -1,15 +1,16 @@
 package com.example.edutech.Repository;
 
 import java.util.List;
+import java.util.ArrayList;
 import org.springframework.stereotype.Repository;
 import com.example.edutech.Model.Curso;
 
 @Repository
 public class CursoRepository {
-    private List<Curso> listaCursos;
+    private List<Curso> listaCursos = new ArrayList<>();
 
     public CursoRepository() {
-
+        listaCursos.add(new Curso(1, "Curso de Java", 20240101, "Juan Perez", "Curso de Java", 10, 100));
     }
 
     public List<Curso> obtenerCursos() {
