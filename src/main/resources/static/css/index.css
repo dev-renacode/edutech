@@ -1,0 +1,110 @@
+html {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.text-detail {
+  color: #00559a;
+  font-weight: 700;
+}
+
+.container-fluid {
+  max-width: 1300px;
+  margin: auto;
+  padding: 0;
+}
+
+.hero-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: white;
+  padding-top: 25px;
+}
+
+.hero-section {
+  width: 100vw;
+  height: 60vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../../assets/images/hero.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.hero-parraf {
+  max-width: 700px;
+  font-size: 1.2rem;
+}
+
+.hero-button {
+  background: #00559a;
+  color: aliceblue;
+  font-weight: 700;
+  border: 0;
+  padding: 10px 15px 10px 15px;
+  border-radius: 6px;
+}
+
+.hero-button-container {
+  margin-top: 20px;
+}
+
+.container-sobre-nosotros {
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.container-productos {
+  max-width: 1300px;
+  margin: auto;
+  padding-top: 100px;
+}
+
+/*FUENTE: MONSTERRAT*/
+@font-face {
+  font-family: "Montsrrat";
+  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("truetype");
+  font-weight: 800; /* Un valor para extra bold, puedes ajustarlo */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montsrrat";
+  src: url("../../assets/fonts/Montserrat-ExtraLight.woff2") format("truetype");
+  font-weight: 200; /* Un valor para extra light */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montsrrat";
+  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("truetype");
+  font-weight: 400; /* Un valor para regular */
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montsrrat";
+  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("truetype");
+  font-weight: 600; /* o 400 para regular */
+  font-style: normal;
+  font-display: swap;
+}
