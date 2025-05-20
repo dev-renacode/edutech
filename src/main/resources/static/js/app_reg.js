@@ -10,3 +10,5 @@ function registrar(){
     }) .then(res => res.json())
         .then(data => alert("Usuario se creado con id: " + data.id));
 }
+const nombre = document.getElementById("nombre")
+console.log(nombre)
