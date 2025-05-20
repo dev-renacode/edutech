@@ -11,6 +11,7 @@ public class CursoRepository {
 
     public CursoRepository() {
         listaCursos.add(new Curso(1, "Curso de Java", 20240101, "Juan Perez", "Curso de Java", 10, 100));
+        listaCursos.add(new Curso(2, "Curso de CSS", 20240101, "Juan Lopez", "Curso de Java", 10, 100));
     }
 
     public List<Curso> obtenerCursos() {

@@ -64,16 +64,28 @@ html {
   margin-top: 20px;
 }
 
-.container-sobre-nosotros {
+.container{
   max-width: 1300px;
   margin: auto;
-  padding-top: 100px;
+  padding: 50px 0px 0px 0px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
 }
 
-.container-productos {
-  max-width: 1300px;
-  margin: auto;
-  padding-top: 100px;
+.curso-container{
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.cursos-title{
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 20px;
 }
 
 /*FUENTE: MONSTERRAT*/
