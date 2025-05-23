@@ -42,13 +42,10 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./nosotros.html">Nosotros</a>
+              <a class="nav-link active" href="#">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./producto.html">Productos</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              <a class="nav-link active" href="#cursos">Cursos</a>
             </li>
           </ul>
         </div>
@@ -68,9 +65,20 @@
       </div>
     </section>
 
-    <section class="cursos-section">
+    <section id="cursos" class="cursos-section">
       <h1 class="cursos-title">Cursos</h1>
       <div class="container">
+        <div class="curso-container">
+          <div class="curso">
+              <h2>${nombreCurso}</h2>
+              <p>${descripcion}</p>
+              <p>Docente: ${docenteCurso}</p>
+              <p>Fecha de creacion: ${fechaCreacion}</p>
+              <p>Duracion: ${horasDuracion} Horas</p>
+              <p>$${precio}</p>
+          </div>
+          <button>Agregar al carrito</button>
+      </div> 
       </div>
     </section>
 
