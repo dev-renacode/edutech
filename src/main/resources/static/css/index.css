@@ -3,99 +3,95 @@ html {
   overflow-x: hidden;
 }
 
+/* Navbar Styles */
 .navbar {
-  position: fixed;
-  width: 100%;
-  z-index: 100;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.text-detail {
-  color: #00559a;
-  font-weight: 700;
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
-.container-fluid {
-  max-width: 1300px;
-  margin: auto;
-  padding: 0;
+.navbar-brand .edu {
+  color: #2196F3;
 }
 
-.hero-container {
-  max-width: 1300px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  color: white;
-  padding-top: 25px;
+.navbar-brand .tech {
+  color: #000;
 }
 
+.navbar .nav-link {
+  font-size: 1.1rem;
+  margin: 0 10px;
+  color: #333;
+}
+
+.navbar .nav-link:hover {
+  color: #2196F3;
+}
+
+.navbar .cart-icon {
+  font-size: 1.2rem;
+}
+
+/* Hero Section Styles */
 .hero-section {
-  width: 100vw;
-  height: 60vh;
+  width: 100%;
+  min-height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("../assets/images/hero.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
 }
 
 .hero-title {
-  font-weight: 700;
-  font-size: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  text-align: left;
+  color: white;
 }
 
 .hero-parraf {
-  max-width: 700px;
   font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  text-align: left;
+  color: white;
 }
 
 .hero-button {
-  background: #00559a;
-  color: aliceblue;
-  font-weight: 700;
-  border: 0;
-  padding: 10px 15px 10px 15px;
-  border-radius: 6px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
 }
 
-.hero-button-container {
-  margin-top: 20px;
+.hero-button:hover {
+  background-color: #1976D2;
 }
 
-.container{
-  max-width: 1300px;
-  margin: auto;
-  padding: 50px 0px 0px 0px;
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.curso-container{
-  width: 350px;
-  height: auto;
-  padding: 20px 30px 20px 30px;
-  background-color: #f2f2f2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.cursos-title{
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-align: center;
-  margin-top: 20px;
+@media (max-width: 768px) {
+  .hero-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /*FUENTE: MONSTERRAT*/
 @font-face {
   font-family: "Montsrrat";
   src: url("../../assets/fonts/Montserrat-Bold.woff2") format("truetype");
-  font-weight: 800; /* Un valor para extra bold, puedes ajustarlo */
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }
@@ -103,7 +99,7 @@ html {
 @font-face {
   font-family: "Montsrrat";
   src: url("../../assets/fonts/Montserrat-ExtraLight.woff2") format("truetype");
-  font-weight: 200; /* Un valor para extra light */
+  font-weight: 200;
   font-style: normal;
   font-display: swap;
 }
@@ -111,7 +107,7 @@ html {
 @font-face {
   font-family: "Montsrrat";
   src: url("../../assets/fonts/Montserrat-Regular.woff2") format("truetype");
-  font-weight: 400; /* Un valor para regular */
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -119,7 +115,7 @@ html {
 @font-face {
   font-family: "Montsrrat";
   src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("truetype");
-  font-weight: 600; /* o 400 para regular */
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }

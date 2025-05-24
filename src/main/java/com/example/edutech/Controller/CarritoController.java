@@ -42,8 +42,8 @@ public class CarritoController {
         return eliminado ? "El curso ha sido eliminado." : "Curso no encontrado.";
     }
 
-    @GetMapping
-    public List<Curso> verCarrito(@RequestParam String param) {
+    @GetMapping("/ver")
+    public List<Curso> verCarrito() {
         return carrito;
     }
 

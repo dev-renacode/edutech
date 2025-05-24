@@ -1,6 +1,9 @@
 const cursoContainer = document.querySelector(".container");
 
-fetch("http://localhost:8080/api/v1/cursos")
+const API = "http://localhost:8080/api/v1/cursos"
+const API_CARRITO = "http://localhost:8080/api/v1/carrito"
+
+fetch(API)
 .then(response => response.json())
 .then(data => {
     data.forEach(curso => {
@@ -16,7 +19,7 @@ fetch("http://localhost:8080/api/v1/cursos")
                     <p>Duracion: ${horasDuracion} Horas</p>
                     <p>$${precio}</p>
                 </div>
-                <button>Agregar al carrito</button>
+                <button onclick="agregarAlCarrito(${id})">Agregar al carrito</button>
             </div> 
         `
     })
@@ -24,4 +27,12 @@ fetch("http://localhost:8080/api/v1/cursos")
 .catch(error => {
     console.error("Error al obtener los cursos:", error);
 });
-//TESTEO
+
+async function agregarAlCarrito(id) {
+    try {
+        await fetch(`${API_CARRITO}/agregar/${id}`, {method: 'POST'});
+        alert("Curso agregado al carrito");
+    } catch (error) {
+        console.error("Error al agregar al carrito:", error);
+    }
+}

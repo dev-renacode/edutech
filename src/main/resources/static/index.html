@@ -11,82 +11,67 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
+    <!-- Font Awesome para el ícono del carrito -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <!--BOOTSTRAP JS (siempre al final del codigo)-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand pb-2 fs-4" href="#">
-          <span class="text-detail">EDU</span>tech
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <span class="edu">EDU</span><span class="tech">tech</span>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav">
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html"
-                >Inicio</a
-              >
+              <a class="nav-link" href="#">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#">Nosotros</a>
+              <a class="nav-link" href="#">Promos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="#cursos">Cursos</a>
+              <a class="nav-link" href="./cursos.html">Cursos</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./carrito.html">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+              </a>
+            </li>
+            <li class="nav-item" id="userWelcome">
+              <span class="nav-link"><span id="mensaje"></span></span>
+            </li>
+            <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>
           </ul>
         </div>
       </div>
     </nav>
 
     <section class="hero-section">
-      <div class="hero-container">
-        <h1 class="hero-title">Aprende con nosotros aprende con EDUtech.</h1>
-        <p class="hero-parraf">
-          EDUtech es una empresa de aprendizaje en línea, si quieres saber más,
-          solo tienes que atreverte y disfrutar tu aventura de aprendizaje.
-        </p>
-        <div class="hero-button-container">
-          <button class="hero-button">Sobre Nosotros</button>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="hero-title">Aprende con nosotros aprende con EDUtech.</h1>
+            <p class="hero-parraf">
+              EDUtech es una empresa de aprendizaje en línea, si quieres saber más,
+              solo tienes que atreverte y disfrutar tu aventura de aprendizaje.
+            </p>
+            <div class="hero-button-container">
+              <button class="hero-button">Sobre Nosotros</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="cursos" class="cursos-section">
-      <h1 class="cursos-title">Cursos</h1>
-      <div class="container">
-        <div class="curso-container">
-          <div class="curso">
-              <h2>${nombreCurso}</h2>
-              <p>${descripcion}</p>
-              <p>Docente: ${docenteCurso}</p>
-              <p>Fecha de creacion: ${fechaCreacion}</p>
-              <p>Duracion: ${horasDuracion} Horas</p>
-              <p>$${precio}</p>
-          </div>
-          <button>Agregar al carrito</button>
-      </div> 
-      </div>
-    </section>
-
-    <script src="js/app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+    <script src="js/app_in.js"></script>
   </body>
 </html>

@@ -1,3 +1,8 @@
+html {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
+}
+
 .cart-item {
     transition: all 0.3s ease;
 }
