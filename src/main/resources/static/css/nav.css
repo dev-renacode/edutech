@@ -1,0 +1,77 @@
+/* Navbar Styles */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar-brand .edu {
+  color: #2196F3;
+}
+
+.navbar-brand .tech {
+  color: #000;
+}
+
+.navbar .nav-link {
+  font-size: 1.1rem;
+  margin: 0 10px;
+  color: #333;
+}
+
+.navbar .nav-link:hover {
+  color: #2196F3;
+}
+
+.navbar .cart-icon {
+  font-size: 1.2rem;
+}
+
+/* Estilos para el dropdown de usuario */
+.auth-required,
+.no-auth {
+    display: none;
+}
+
+/* Asegurar que los elementos del dropdown tengan el ancho correcto */
+.dropdown-menu {
+    min-width: 200px;
+}
+
+/* Estilos para los íconos en el dropdown */
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* Estilo para el ícono de usuario en el dropdown toggle */
+.nav-link .fa-user {
+    font-size: 1.2em;
+}
+
+/* Ajuste para el mensaje de bienvenida */
+#mensaje {
+    margin-right: 10px;
+}
+
+/* Fuente Montserrat */
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+} 

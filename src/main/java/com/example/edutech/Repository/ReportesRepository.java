@@ -5,7 +5,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.edutech.Model.Curso;
 import com.example.edutech.Model.Reportes;
 
 @Repository

@@ -13,8 +13,8 @@ const login = () => {
     .then(response => response.json())
     .then(data => {
         if(data.result === "OK"){
-            sessionStorage.setItem("nombreUsuario", data.nombre)
-            window.location.href = "/index.html";
+            sessionStorage.setItem("nombreUsuario", data.nombre);
+            window.location.replace("http://localhost:8080/index.html");
         }else{
             alert("Acceso ha sido denegado")
         }

@@ -13,6 +13,7 @@
     />
     <!-- Font Awesome para el ícono del carrito -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/nav.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
@@ -41,10 +42,25 @@
                 <i class="fas fa-shopping-cart cart-icon"></i>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="notificaciones">
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
             <li class="nav-item" id="userWelcome">
               <span class="nav-link"><span id="mensaje"></span></span>
             </li>
-            <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li class="auth-required"><a class="dropdown-item" href="./perfil.html"><i class="fas fa-user-circle me-2"></i>Perfil</a></li>
+                <li class="auth-required"><hr class="dropdown-divider"></li>
+                <li class="no-auth"><a class="dropdown-item" href="./login.html" id="loginBtn"><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión</a></li>
+                <li class="auth-required"><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="logoutBtn"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</a></li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>

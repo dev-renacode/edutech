@@ -75,10 +75,6 @@
                 <i class="fas fa-shopping-cart cart-icon"></i>
               </a>
             </li>
-            <li class="nav-item" id="userWelcome">
-              <span class="nav-link"><span id="mensaje"></span></span>
-            </li>
-            <button class="btn btn-danger" onclick="cerrarSesion()">Cerrar Sesión</button>
           </ul>
         </div>
       </div>
@@ -87,21 +83,17 @@
     <div class="container">
       <div class="report-form">
         <h2 class="form-title">Crear Reporte</h2>
-        <form id="reportForm">
-          <div class="mb-3">
-            <label for="email" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" required>
-          </div>
+        <form id="reportForm" >
           <div class="mb-3">
             <label for="title" class="form-label">Título del Reporte</label>
             <input type="text" class="form-control" id="title" required>
           </div>
           <div class="mb-3">
-            <label for="report" class="form-label">Descripción del Reporte</label>
-            <textarea class="form-control" id="report" rows="6" required></textarea>
+            <label for="descripcion" class="form-label">Descripción del Reporte</label>
+            <textarea class="form-control" id="descripcion" rows="6" required></textarea>
           </div>
           <div class="text-center">
-            <button type="submit" class="btn btn-submit">Enviar Reporte</button>
+            <button type="submit" class="btn btn-submit" id="enviarReporte">Enviar Reporte</button>
           </div>
         </form>
       </div>
@@ -112,13 +104,5 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <script src="js/app_in.js"></script>
-    <script>
-      document.getElementById('reportForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        // Aquí puedes agregar la lógica para manejar el envío del formulario
-        alert('Reporte enviado con éxito');
-        this.reset();
-      });
-    </script>
+    <script src="js/app_reportes.js"></script>
 </body>

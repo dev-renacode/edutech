@@ -8,7 +8,10 @@ function registrar(){
             password: document.getElementById("password").value,
         })
     }) .then(res => res.json())
-        .then(data => alert("Usuario se creado con id: " + data.id));
+        .then(data => {
+            alert("Usuario se creado con id: " + data.id);
+            window.location.replace("http://localhost:8080/login.html");
+        });
 }
 const nombre = document.getElementById("nombre")
 console.log(nombre)

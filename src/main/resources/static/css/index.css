@@ -119,3 +119,31 @@ html {
   font-style: normal;
   font-display: swap;
 }
+
+/* Estilos para el dropdown de usuario */
+.auth-required,
+.no-auth {
+    display: none;
+}
+
+/* Asegurar que los elementos del dropdown tengan el ancho correcto */
+.dropdown-menu {
+    min-width: 200px;
+}
+
+/* Estilos para los íconos en el dropdown */
+.dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* Estilo para el ícono de usuario en el dropdown toggle */
+.nav-link .fa-user {
+    font-size: 1.2em;
+}
+
+/* Ajuste para el mensaje de bienvenida */
+#mensaje {
+    margin-right: 10px;
+}
