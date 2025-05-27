@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Service
-public class ReportesServices {
+public class ReportesService {
     @Autowired
     private ReportesRepository ReportesRepository;
 
