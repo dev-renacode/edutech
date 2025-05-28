@@ -1,0 +1,23 @@
+.about-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+.mission-vision {
+    padding: 60px 0;
+}
+.card {
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.team-section {
+    padding: 60px 0;
+}
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+}

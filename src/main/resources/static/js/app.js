@@ -19,7 +19,7 @@ fetch(API)
                     <p>Duracion: ${horasDuracion} Horas</p>
                     <p>$${precio}</p>
                 </div>
-                <button onclick="agregarAlCarrito(${id})">Agregar al carrito</button>
+                <button onclick="agregarAlCarrito(${id})" class="btn btn-primary">Agregar al carrito</button>
             </div> 
         `
     })

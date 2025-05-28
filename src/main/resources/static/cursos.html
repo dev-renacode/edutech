@@ -21,7 +21,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <span class="edu">EDU</span><span class="tech">tech</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +30,13 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="#">Nosotros</a>
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promos</a>
+              <a class="nav-link" href="reportes.html">Reportes</a> 
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./cursos.html">Cursos</a>
+              <a class="nav-link disabled" href="./cursos.html">Cursos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./carrito.html">
@@ -67,17 +67,20 @@
       </div>
     </nav>
 
-    <div id="container-cursos">
-        
+    <div class="all-cursos">
+      <h1>Nuestros Cursos</h1>
+      <div id="container-cursos"> 
+        <!-- Las tarjetas de cursos se generarán dinámicamente con JavaScript -->
+      </div>
     </div>
     
     <script src="js/app.js"></script>
+    <script src="js/app_in.js"></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
-    <script src="js/app_in.js"></script>
   </body>
 </html>

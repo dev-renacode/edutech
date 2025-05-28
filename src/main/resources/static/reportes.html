@@ -13,7 +13,7 @@
     />
     <!-- Font Awesome para el ícono del carrito -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/nav.css" />
     <style>
       .report-form {
         max-width: 800px;
@@ -53,7 +53,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <span class="edu">EDU</span><span class="tech">tech</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,10 +62,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav align-items-center">
             <li class="nav-item">
-              <a class="nav-link" href="#">Nosotros</a>
+              <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Promos</a>
+              <a class="nav-link" href="reportes.html">Reportes</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./cursos.html">Cursos</a>
@@ -74,6 +74,25 @@
               <a class="nav-link" href="./carrito.html">
                 <i class="fas fa-shopping-cart cart-icon"></i>
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="notificaciones">
+                <i class="fas fa-bell"></i>
+              </a>
+            </li>
+            <li class="nav-item" id="userWelcome">
+              <span class="nav-link"><span id="mensaje"></span></span>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-user"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li class="auth-required"><a class="dropdown-item" href="./perfil.html"><i class="fas fa-user-circle me-2"></i>Perfil</a></li>
+                <li class="auth-required"><hr class="dropdown-divider"></li>
+                <li class="no-auth"><a class="dropdown-item" href="./login.html" id="loginBtn"><i class="fas fa-sign-in-alt me-2"></i>Iniciar Sesión</a></li>
+                <li class="auth-required"><a class="dropdown-item" href="#" onclick="cerrarSesion()" id="logoutBtn"><i class="fas fa-sign-out-alt me-2"></i>Cerrar Sesión</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -104,5 +123,6 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+    <script src="js/app_in.js"></script>
     <script src="js/app_reportes.js"></script>
 </body>

@@ -5,7 +5,7 @@ const titulo = document.getElementById('title');
 enviarReporte.addEventListener('click', (e) => {
     e.preventDefault();
 
-    fetch('http://localhost:8080/api/v1/notificaciones/guardar', {
+    fetch('http://localhost:8080/api/v1/reportes/guardar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -17,7 +17,7 @@ enviarReporte.addEventListener('click', (e) => {
     })
     .then(response => response.json())
     .then(data => {
-        alert('Notificación guardada:', data);
+        alert('Reporte guardado:', data);
     })
     .catch(error => {
         console.error('Error:', error);

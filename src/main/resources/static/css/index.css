@@ -3,39 +3,6 @@ html {
   overflow-x: hidden;
 }
 
-/* Navbar Styles */
-.navbar {
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-brand {
-  font-size: 1.8rem;
-  font-weight: bold;
-}
-
-.navbar-brand .edu {
-  color: #2196F3;
-}
-
-.navbar-brand .tech {
-  color: #000;
-}
-
-.navbar .nav-link {
-  font-size: 1.1rem;
-  margin: 0 10px;
-  color: #333;
-}
-
-.navbar .nav-link:hover {
-  color: #2196F3;
-}
-
-.navbar .cart-icon {
-  font-size: 1.2rem;
-}
-
 /* Hero Section Styles */
 .hero-section {
   width: 100%;

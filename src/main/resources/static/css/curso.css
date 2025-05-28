@@ -1,42 +1,106 @@
-html {
-    font-family: "Montserrat", sans-serif;
-    overflow-x: hidden;
+.all-cursos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
 }
 
-.navbar {
-    position: fixed;
+.all-cursos h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+#container-cursos {
+  display: flex;
+  max-width: 1300px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.curso-container {
+  position: relative;
+  width: 320px;
+  height: auto;
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  padding-bottom: 80px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.curso-container img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.curso-container h2 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.curso-container p {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.curso-container .precio {
+  font-size: 1.25rem;
+  color: #2c3e50;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.curso-container button {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 50px);
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.curso-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .all-cursos {
+    padding: 30px 15px;
+  }
+
+  .all-cursos h1 {
+    font-size: 2rem;
+  }
+
+  .curso-container {
     width: 100%;
-    z-index: 100;
+    max-width: 320px;
+  }
 }
-
-.text-detail {
-    color: #00559a;
-    font-weight: 700;
-}
-
-.container-cursos{
-    max-width: 1300px;
-    margin: auto;
-    padding: 50px 0px 0px 0px;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-  
-  .curso-container{
-    width: 350px;
-    height: auto;
-    padding: 20px 30px 20px 30px;
-    background-color: #f2f2f2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .cursos-title{
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-top: 20px;
-  }
