@@ -64,54 +64,5 @@ async function calcularTotal() {
     total.textContent = `$${totalCarrito}`;
 }
 
-async function guardarOrden() {
-  try {
-    const resp = await fetch(`${API_CARRITO}/ver`);
-    const cursos = await resp.json();
-
-    if (cursos.length === 0) return alert("El carrito está vacío");
-
-    // Generar un identificador único para ESTA orden (agrupa todos los ítems)
-    const ordenId = Date.now(); // número basado en timestamp, suficiente para pruebas
-
-    const agrupados = cursos.reduce((acc, c) => {
-      if (!acc[c.id]) acc[c.id] = {              // si no existe, lo creo
-        ordenId,                                // << nuevo campo
-        nombreCurso: c.nombreCurso,
-        precio: c.precio,
-        cantidad: 0,
-        total: 0
-      };
-      acc[c.id].cantidad += 1;
-      acc[c.id].total    = acc[c.id].precio * acc[c.id].cantidad;
-      return acc;
-    }, {});
-
-    const ordenes = Object.values(agrupados);
-
-    for (const o of ordenes) {
-      await fetch(`${API_ORDEN}/guardar`, {
-        method : 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify(o)
-      });
-    }
-
-    // Vaciar el carrito en la API y actualizar la interfaz
-    await fetch(`${API_CARRITO}/vaciar`, { method: 'DELETE' });
-    cargarCarrito();
-    calcularTotal();
-
-    console.log(`Órdenes guardadas con ordenId=${ordenId}:`, ordenes);
-    //VACIAR CARRITO
-    
-  } catch (err) {
-    console.error('Error enviando órdenes:', err);
-  }
-}
-
 cargarCarrito();
 calcularTotal();
-ejemploVerCarrito();
-
-btnProcederPago.addEventListener('click', guardarOrden);

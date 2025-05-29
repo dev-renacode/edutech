@@ -8,11 +8,14 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Notificaciones {
 
+public class Notificaciones {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String mensaje;
-       
+    private String usuario;
+    private Long idOrden;
+    private Boolean leido;
 }
+

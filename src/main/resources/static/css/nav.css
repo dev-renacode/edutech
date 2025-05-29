@@ -58,20 +58,3 @@
 #mensaje {
     margin-right: 10px;
 }
-
-/* Fuente Montserrat */
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-} 

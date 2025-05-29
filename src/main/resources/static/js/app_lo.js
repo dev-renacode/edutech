@@ -29,6 +29,7 @@ const login = async() => {
         
         if(data.result === "OK"){
             // Guardar datos del usuario
+            sessionStorage.setItem("idUsuario", data.id);
             sessionStorage.setItem("nombreUsuario", data.nombre);
             sessionStorage.setItem("usuarioAutenticado", "true");
             

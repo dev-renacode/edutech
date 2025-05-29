@@ -29,4 +29,9 @@ public class OrdenController {
     public void vaciarCarrito(){
         ordenService.vaciarCarrito();
     }
+
+    @GetMapping("/listar")
+    public List<Orden> listar(){
+        return ordenService.listar();
+    }
 }
