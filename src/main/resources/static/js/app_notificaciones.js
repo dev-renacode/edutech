@@ -14,7 +14,7 @@ async function guardarOrden() {
         const agrupados = cursos.reduce((acc, c) => {
         if (!acc[c.id]) acc[c.id] = {
             ordenId,            
-            nombreUsuario: nombreUsuario,
+            usuario: nombreUsuario,
             nombreCurso: c.nombreCurso,
             precio: c.precio,
             cantidad: 0,

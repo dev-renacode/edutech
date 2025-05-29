@@ -5,7 +5,6 @@ const login = async() => {
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    // Validación básica de campos
     if (!email || !password) {
         alert("Por favor, complete todos los campos");
         return;
@@ -44,7 +43,6 @@ const login = async() => {
     }
 }
 
-// Prevenir el envío del formulario por defecto
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     login();

@@ -21,7 +21,6 @@ public class UsuarioController {
 
     @PostMapping("/login")
     public Map<String, String> login(@RequestBody Usuario u){
-
         Optional<Usuario> user = serv.autenticar(u.getEmail(), u.getPassword());
         Map <String, String> respuesta = new HashMap<>();
         if (user.isPresent()) {

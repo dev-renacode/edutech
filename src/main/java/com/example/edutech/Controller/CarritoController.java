@@ -13,10 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 
-
-
 @RestController
-@RequestMapping("/api/v1/carrito") //Cambiar por si acaso
+@RequestMapping("/api/v1/carrito")
 public class CarritoController {
     private final List<Curso> carrito = new ArrayList<>();
     
