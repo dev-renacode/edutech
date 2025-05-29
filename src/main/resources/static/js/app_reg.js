@@ -13,5 +13,6 @@ function registrar(){
             window.location.replace("http://localhost:8080/login.html");
         });
 }
+
 const nombre = document.getElementById("nombre")
 console.log(nombre)

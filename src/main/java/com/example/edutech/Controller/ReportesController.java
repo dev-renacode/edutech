@@ -10,7 +10,7 @@ import java.util.*;
 public class ReportesController {
     private ReportesService reportesServices;
 
-    ReportesController(ReportesService reportesServices) {
+    public ReportesController(ReportesService reportesServices) {
         this.reportesServices = reportesServices;
     }
 
