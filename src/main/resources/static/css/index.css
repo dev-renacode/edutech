@@ -1,6 +1,6 @@
-html {
-  font-family: "Montserrat", sans-serif;
+body {
   overflow-x: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Hero Section Styles */
@@ -54,38 +54,6 @@ html {
   }
 }
 
-/*FUENTE: MONSTERRAT*/
-@font-face {
-  font-family: "Montsrrat";
-  src: url("../../assets/fonts/Montserrat-Bold.woff2") format("truetype");
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montsrrat";
-  src: url("../../assets/fonts/Montserrat-ExtraLight.woff2") format("truetype");
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montsrrat";
-  src: url("../../assets/fonts/Montserrat-Regular.woff2") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Montsrrat";
-  src: url("../../assets/fonts/Montserrat-SemiBold.woff2") format("truetype");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
 
 /* Estilos para el dropdown de usuario */
 .auth-required,

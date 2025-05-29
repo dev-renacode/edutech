@@ -23,5 +23,9 @@ public class ReportesController {
     public Optional<Reportes> obtenerReportes(@PathVariable Long id){
         return reportesServices.obtenerReportes(id);
     }
-    
+
+    @GetMapping("/listar")
+    public List<Reportes> listarReportes(){
+        return reportesServices.listarReportes();
+    }
 }

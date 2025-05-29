@@ -14,4 +14,6 @@ public class Reportes {
     private Long id;
     private String titulo;
     private String mensaje;
+    private String usuario;
+    private String fecha;
 }

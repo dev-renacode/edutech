@@ -10,6 +10,7 @@ async function guardarOrden() {
         if (cursos.length === 0) return alert("El carrito está vacío");
 
         const ordenId = Date.now();
+        const fecha = new Date().toLocaleDateString('es-ES');
 
         const agrupados = cursos.reduce((acc, c) => {
         if (!acc[c.id]) acc[c.id] = {
@@ -18,7 +19,8 @@ async function guardarOrden() {
             nombreCurso: c.nombreCurso,
             precio: c.precio,
             cantidad: 0,
-            total: 0
+            total: 0,
+            fecha: fecha
         };
         acc[c.id].cantidad += 1;
         acc[c.id].total    = acc[c.id].precio * acc[c.id].cantidad;
@@ -146,8 +148,7 @@ async function mostrarNotificaciones() {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' }
                 });
-
-                // Refresca las notificaciones
+                
                 mostrarNotificaciones();
             });
         });

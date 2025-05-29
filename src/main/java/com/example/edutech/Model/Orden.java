@@ -18,4 +18,5 @@ public class Orden {
     private double precio;
     private int cantidad;
     private double total;
+    private String fecha;
 }

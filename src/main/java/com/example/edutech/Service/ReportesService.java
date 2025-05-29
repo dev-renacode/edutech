@@ -2,6 +2,8 @@ package com.example.edutech.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Optional;
 
 import com.example.edutech.Model.Reportes;
@@ -18,5 +20,9 @@ public class ReportesService {
 
     public Optional<Reportes> obtenerReportes(Long id){
         return repo.findById(id);
+    }
+
+    public List<Reportes> listarReportes(){
+        return repo.findAll();
     }
 }
