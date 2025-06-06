@@ -35,8 +35,15 @@ public class CarritoController {
     
     @DeleteMapping("/eliminar/{id}")
     public String eliminarCurso(@PathVariable int id){
-        boolean eliminado = carrito.removeIf(curso -> curso.getId() == id);
-        return eliminado ? "El curso ha sido eliminado." : "Curso no encontrado.";
+        Iterator<Curso> iterator = carrito.iterator();
+        while (iterator.hasNext()) {
+            Curso curso = iterator.next();
+            if (curso.getId() == id) {
+                iterator.remove();
+                return "El curso ha sido eliminado.";
+            }
+        }
+        return "Curso no encontrado.";
     }
 
     @GetMapping("/ver")

@@ -7,6 +7,15 @@ const subtotal = document.getElementById('subtotal');
 const descuento = document.getElementById('descuento');
 const btnProcederPago = document.getElementById('btnProcederPago');
 
+const obtenerStock = async (idProducto) => {
+    try {
+        const response = await fetch(`${API_STOCK}/producto/${idProducto}`);
+        return response.ok ? await response.json() : null;
+    } catch {
+        return null;
+    }
+};
+
 const obtenerCarrito = async () => {
     const response = await fetch(`${API_CARRITO}/ver`);
     return response.ok ? await response.json() : [];
@@ -47,7 +56,9 @@ const cargarCarrito = async () => {
 
 window.eliminarCurso = async (id) => {
     try {
+        const stock = await obtenerStock(id);
         await fetch(`${API_CARRITO}/eliminar/${id}`, {method: 'DELETE'});
+        await fetch(`${API_STOCK}/${id}/cantidad/${stock.cantidadDisponible + 1}`, {method: 'PUT'});
         alert("Curso eliminado del carrito");
         cargarCarrito();
     } catch {
