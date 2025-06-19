@@ -1,4 +1,4 @@
-let API_URL = "http://localhost:8080/api/v1/usuarios/login";
+let API_URL = "http://10.15.239.162:8080/api/v1/usuarios/login";
 const form = document.getElementById("form");
 
 const login = async() => {
@@ -33,7 +33,7 @@ const login = async() => {
             sessionStorage.setItem("usuarioAutenticado", "true");
             
             // Redirigir al usuario
-            window.location.href = "http://localhost:8080/index.html";
+            window.location.href = "http://10.15.239.162:8080/index.html";
         } else {
             alert("Credenciales incorrectas. Por favor, intente nuevamente.");
         }

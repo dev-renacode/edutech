@@ -8,7 +8,7 @@ enviarReporte.addEventListener('click', (e) => {
     
     //fecha con formato dd/mm/yyyy
     const fecha = new Date().toLocaleDateString('es-ES');
-    fetch('http://localhost:8080/api/v1/reportes/guardar', {
+    fetch('http://10.15.239.162:8080/api/v1/reportes/guardar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
