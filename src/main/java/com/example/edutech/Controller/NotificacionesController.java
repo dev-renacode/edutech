@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.edutech.Model.Notificaciones;
 import com.example.edutech.Service.NotificacionesService;
 
+import io.swagger.v3.oas.annotations.Operation;
+
 @RestController
 @RequestMapping("/api/v1/notificaciones")
 public class NotificacionesController {
@@ -22,22 +24,25 @@ public class NotificacionesController {
     public NotificacionesController(NotificacionesService notificacionesService){
         this.notificacionesService = notificacionesService;
     }
-
+    @Operation(summary = "Listar notificaciones", description = "Listar notificaciones por usuario")
     @GetMapping("/listar/{usuario}")
     public Optional<Notificaciones> listar(@PathVariable String usuario){
         return notificacionesService.listarNotificaciones(usuario);
     }
 
+    @Operation(summary = "Guardar notificación", description = "Guardar una notificación")
     @PostMapping("/guardar")
     public Notificaciones guardar(@RequestBody Notificaciones n){
         return notificacionesService.guardar(n);
     }
 
+    @Operation(summary = "Listar notificaciones", description = "Listar todas las notificaciones")
     @GetMapping("/listar")
     public List<Notificaciones> listar(){
         return notificacionesService.listar();
-    }
+    }   
 
+    @Operation(summary = "Marcar notificación como leída", description = "Marcar una notificación como leída")
     @PutMapping("/marcar-leida/{id}")
     public void marcarLeida(@PathVariable Long id) {
         notificacionesService.marcarLeida(id);
