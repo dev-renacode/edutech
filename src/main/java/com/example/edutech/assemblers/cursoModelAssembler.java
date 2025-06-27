@@ -2,7 +2,7 @@ package com.example.edutech.assemblers;
 
 //importar las clases necesarias para el modelo y controlador
 import com.example.edutech.Model.Curso;
-import com.example.edutech.Controller.CursoController;
+import com.example.edutech.Controller.CursoControllerV2;
 
 //importar las clases static para crear los enlaces HATEOAS
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
@@ -28,10 +28,10 @@ public class cursoModelAssembler implements RepresentationModelAssembler<Curso, 
     //Metodo para convertir un objeto de Curso en una EntityModel. Usamos la anotacio NonNull para no aceptar valores nulos, usamos linkTo con el metodo MethodOn para crear los enlaces HATEOAS para cada metodo REST del controlador
     public @NonNull EntityModel<Curso> toModel(Curso curso){
         return EntityModel.of(curso,
-            linkTo(methodOn(CursoController.class).buscarCurso(curso.getId())).withSelfRel(),
-            linkTo(methodOn(CursoController.class).listarCursos()).withRel("listarCursos"),
-            linkTo(methodOn(CursoController.class).actualizarCurso(curso.getId(), curso)).withRel("Actualizar"),
-            linkTo(methodOn(CursoController.class).eliminarCurso(curso.getId())).withRel("Eliminar")
+            linkTo(methodOn(CursoControllerV2.class).buscarCurso(curso.getId())).withSelfRel(),
+            linkTo(methodOn(CursoControllerV2.class).listarCursos()).withRel("listarCursos"),
+            linkTo(methodOn(CursoControllerV2.class).actualizarCurso(curso.getId(), curso)).withRel("Actualizar"),
+            linkTo(methodOn(CursoControllerV2.class).eliminarCurso(curso.getId())).withRel("Eliminar")
             );
 
     }

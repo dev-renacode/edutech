@@ -26,11 +26,8 @@ public class carritoModelAssembler implements RepresentationModelAssembler<Curso
     @Override
     public @NonNull EntityModel<Curso> toModel(Curso curso){
         return EntityModel.of(curso,
-        linkTo(methodOn(CarritoController.class).verCarrito()).withRel("verCarrito"),
         linkTo(methodOn(CarritoController.class).eliminarCurso(curso.getId())).withRel("eliminarCurso"),
-        linkTo(methodOn(CarritoController.class).agregarCurso(curso.getId())).withRel("agregarCurso"),
-        linkTo(methodOn(CarritoController.class).vaciarCarrito()).withRel("vaciarCarrito"),
-        linkTo(methodOn(CarritoController.class).totalCursosCarrito()).withRel("totalCursos")
+        linkTo(methodOn(CarritoController.class).agregarCurso(curso.getId())).withRel("agregarCurso")
         );
     }
 }

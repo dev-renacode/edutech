@@ -72,25 +72,29 @@ public class CursoControllerV2 {
     }
 
     @Operation(summary = "Buscar un curso por su id", description = "Obtiene un curso por su id")
-    @GetMapping("{id}")
-    public Curso buscarCurso(@PathVariable int id){
-        return cursoService.getCursoid(id);
+    @GetMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public EntityModel<Curso> buscarCurso(@PathVariable int id){
+        Curso curso = cursoService.getCursoid(id);
+        return assembler.toModel(curso);
     }
 
     @Operation(summary = "Actualizar un curso", description = "Actualiza un curso existente en la base de datos")
-    @PutMapping(value = "{id}", produces = MediaTypes.HAL_JSON_VALUE)
-    public Curso actualizarCurso(@PathVariable int id, @RequestBody Curso curso) {
-        return cursoService.updateCurso(curso);
+    @PutMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<?> actualizarCurso(@PathVariable int id, @RequestBody Curso curso) {
+        cursoService.updateCurso(curso);
+        Curso actualizado = cursoService.updateCurso(curso);
+        return ResponseEntity.ok(assembler.toModel(actualizado));
     }
 
     @Operation(summary = "Eliminar un curso", description = "Elimina un curso existente en la base de datos")
-    @DeleteMapping("{id}")
-    public String eliminarCurso(@PathVariable int id) {
-        return cursoService.deleteCurso(id);
+    @DeleteMapping(value = "/{id}", produces = MediaTypes.HAL_JSON_VALUE)
+    public ResponseEntity<?> eliminarCurso(@PathVariable int id) {
+        cursoService.deleteCurso(id);
+        return ResponseEntity.noContent().build();
     }
 
     @Operation(summary = "Obtener el total de cursos", description = "Obtiene el número total de cursos en la base de datos")
-    @GetMapping("/total")
+    @GetMapping(value = "/total", produces = MediaTypes.HAL_JSON_VALUE)
     public int totalCursosV2() {
         return cursoService.totalCursosV2();
     }

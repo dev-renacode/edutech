@@ -1,8 +1,8 @@
 const cursoContainer = document.getElementById("container-cursos");
 
-const API = "http://localhost:8080/api/v1/cursos"
-const API_CARRITO = "http://localhost:8080/api/v1/carrito"
-const API_STOCK = "http://localhost:8080/api/stock"
+const API = "http://10.15.233.68:8080/api/v1/cursos"
+const API_CARRITO = "http://10.15.233.68:8080/api/v1/carrito"
+const API_STOCK = "http://10.15.233.68:8080/api/stock"
 
 const obtenerStock = async (idProducto) => {
     try {

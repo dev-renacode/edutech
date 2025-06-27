@@ -1,4 +1,4 @@
-const API_NOTIFICACIONES = "http://localhost:8080/api/v1/notificaciones";
+const API_NOTIFICACIONES = "http://10.15.233.68:8080/api/v1/notificaciones";
 const nombreUsuario = sessionStorage.getItem("nombreUsuario");
 const notificaciones = document.getElementById("notificaciones");
 
@@ -87,7 +87,7 @@ async function mostrarNotificaciones() {
             return;
         }
 
-        const ordenesResp = await fetch("http://localhost:8080/api/v1/ordenes/listar");
+        const ordenesResp = await fetch("http://10.15.233.68:8080/api/v1/ordenes/listar");
         const ordenes = await ordenesResp.json();
 
         notificaciones.forEach(notificacion => {
@@ -144,7 +144,7 @@ async function mostrarNotificaciones() {
                 const notiId = this.getAttribute('data-id');
                 if (!notiId) return;
 
-                await fetch(`http://localhost:8080/api/v1/notificaciones/marcar-leida/${notiId}`, {
+                await fetch(`http://10.15.233.68:8080/api/v1/notificaciones/marcar-leida/${notiId}`, {
                     method: 'PUT',
                     headers: { 'Content-Type': 'application/json' }
                 });
