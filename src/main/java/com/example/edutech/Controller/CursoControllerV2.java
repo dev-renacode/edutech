@@ -23,7 +23,7 @@ import com.example.edutech.Service.CursoService;
 import com.example.edutech.assemblers.cursoModelAssembler;
 
 //Importar las clases necesarias para usar HATEOAS
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 //importar las clases de HATEOAS EntityModel, CollectionModel y MediaType para manejar los modelos de respuestas 
 import org.springframework.hateoas.EntityModel;
@@ -33,7 +33,7 @@ import org.springframework.hateoas.MediaTypes;
 //importar las clases responseEntity para mejorar las respuestas http
 import org.springframework.http.ResponseEntity;
 
-//importar Stream y colecciones para manerar la lista cursos en java
+//importar Stream y colecciones para manejar la lista cursos en java
 import java.util.stream.Collectors;
 
 @RestController
@@ -52,10 +52,9 @@ public class CursoControllerV2 {
     //agregar anotacion operation para documentar cada endpoint o método REST 
     @Operation(summary = "Muestra todos los cursos disponibles", description = "Obtiene la lista de todos los cursos disponibles")
     @GetMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public CollectionModel<EntityModel<Curso>> cursos = listarCursos() {
-        //Obtener la lista de libros y la convertimos a EntityModel usando el Assembler
-        List<EntityModel<Curso>> cursos = cursoService.getCursos().stream
-        ()
+    public CollectionModel<EntityModel<Curso>> listarCursos() {
+        //Obtener la lista de cursos y la convertimos a EntityModel usando el Assembler
+        List<EntityModel<Curso>> cursos = cursoService.getCursos().stream()
             .map(assembler::toModel)
             .collect(Collectors.toList());
 
@@ -63,15 +62,12 @@ public class CursoControllerV2 {
             linkTo(methodOn(CursoControllerV2.class).listarCursos()).withSelfRel());
     }
 
-
-
     @Operation(summary = "Agregar un curso", description = "Agrega un nuevo curso a la base de datos")
     @PostMapping(produces = MediaTypes.HAL_JSON_VALUE)
-    public  ResponseEntity<EntityModel<Curso>> agregarCurso(@RequestBody Curso curso) {
+    public ResponseEntity<EntityModel<Curso>> agregarCurso(@RequestBody Curso curso) {
         Curso crear = cursoService.saveCurso(curso);
         return ResponseEntity
-            .created(linkTo(methodOn(CursoController.class).
-            buscarCurso(crear.getId())).toUri())
+            .created(linkTo(methodOn(CursoControllerV2.class).buscarCurso(crear.getId())).toUri())
             .body(assembler.toModel(crear));
     }
 

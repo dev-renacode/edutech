@@ -10,7 +10,7 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 //importar la clase EntityModel para usar HATEOAS
 import org.springframework.hateoas.EntityModel;
 
-//importar la interfaz RepresentationModelAssembler para crear el emsamblador de CursoModelAssembler
+//importar la interfaz RepresentationModelAssembler para crear el ensamblador de CarritoModelAssembler
 import org.springframework.hateoas.server.RepresentationModelAssembler;
 
 //importar los stereotipos necesarios para el ensamblador
@@ -19,17 +19,18 @@ import org.springframework.stereotype.Component;
 //importar la anotacion NonNull para indicar que el método no acepta valores nulos
 import org.springframework.lang.NonNull;
 
-//agregar la anotacion Component para indicar que nuestra clase CursoModelAssembler es un componente spring
+//agregar la anotacion Component para indicar que nuestra clase CarritoModelAssembler es un componente spring
 @Component
-
-public class carritoModelAssembler implements RepresentationModelAssembler<Carrito, EntityModel<Carrito>>{
+public class carritoModelAssembler implements RepresentationModelAssembler<Curso, EntityModel<Curso>>{
+    
     @Override
     public @NonNull EntityModel<Curso> toModel(Curso curso){
-        return EntityModel.of(c,
-        linkTo(methodOn(carritoController.class).verCarrito(curso.getId())).withRel("Carrito"),
-        linkTo(methodOn(carritoController.class).eliminarCurso(curso.getId())).withRel("Eliminar")
+        return EntityModel.of(curso,
+        linkTo(methodOn(CarritoController.class).verCarrito()).withRel("verCarrito"),
+        linkTo(methodOn(CarritoController.class).eliminarCurso(curso.getId())).withRel("eliminarCurso"),
+        linkTo(methodOn(CarritoController.class).agregarCurso(curso.getId())).withRel("agregarCurso"),
+        linkTo(methodOn(CarritoController.class).vaciarCarrito()).withRel("vaciarCarrito"),
+        linkTo(methodOn(CarritoController.class).totalCursosCarrito()).withRel("totalCursos")
         );
     }
-
-    
 }

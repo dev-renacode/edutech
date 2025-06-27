@@ -29,7 +29,7 @@ public class cursoModelAssembler implements RepresentationModelAssembler<Curso, 
     public @NonNull EntityModel<Curso> toModel(Curso curso){
         return EntityModel.of(curso,
             linkTo(methodOn(CursoController.class).buscarCurso(curso.getId())).withSelfRel(),
-            linkTo(methodOn(CursoController.class).listarCursos(curso.getId())).withRel("Curso"),
+            linkTo(methodOn(CursoController.class).listarCursos()).withRel("listarCursos"),
             linkTo(methodOn(CursoController.class).actualizarCurso(curso.getId(), curso)).withRel("Actualizar"),
             linkTo(methodOn(CursoController.class).eliminarCurso(curso.getId())).withRel("Eliminar")
             );
