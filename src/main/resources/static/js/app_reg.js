@@ -1,5 +1,5 @@
 function registrar(){
-    fetch("http://10.15.233.68:8080/api/v1/usuarios/registrar",{
+    fetch("http://192.168.1.25:8080/api/v1/usuarios/registrar",{
         method: "POST",
         headers: {"Content-Type":"application/json"},
         body: JSON.stringify({
@@ -10,7 +10,7 @@ function registrar(){
     }) .then(res => res.json())
         .then(data => {
             alert("Usuario se creado con id: " + data.id);
-            window.location.replace("http://10.15.233.68:8080/login.html");
+            window.location.replace("http://192.168.1.25:8080/login.html");
         });
 }
 

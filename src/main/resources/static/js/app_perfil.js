@@ -1,5 +1,5 @@
-const API_REPORTES = "http://10.15.233.68:8080/api/v1/reportes";
-const API_ORDENES = "http://10.15.233.68:8080/api/v1/ordenes";
+const API_REPORTES = "http://192.168.1.25:8080/api/v1/reportes";
+const API_ORDENES = "http://192.168.1.25:8080/api/v1/ordenes";
 
 const reportesDiv = document.getElementById('reportes');
 const nombreUsuario = sessionStorage.getItem('nombreUsuario');

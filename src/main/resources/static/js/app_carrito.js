@@ -1,6 +1,6 @@
-const API_CARRITO = "http://10.15.233.68:8080/api/v1/carrito"
-const API_ORDEN = "http://10.15.233.68:8080/api/v1/ordenes"
-const API_STOCK = "http://10.15.233.68:8080/api/stock"
+const API_CARRITO = "http://192.168.1.25:8080/api/v1/carrito"
+const API_ORDEN = "http://192.168.1.25:8080/api/v1/ordenes"
+const API_STOCK = "http://192.168.1.25:8080/api/stock"
 
 const total = document.getElementById('total');
 const subtotal = document.getElementById('subtotal');
